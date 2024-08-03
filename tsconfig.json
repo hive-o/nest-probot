@@ -14,7 +14,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@standalone-template/source": ["src/index.ts"]
+      "@nest-probot/source": ["src/index.ts"]
     }
   },
   "files": [],

@@ -1,12 +1,11 @@
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { defineConfig } from 'vite';
 
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-
 export default defineConfig({
-  root: __dirname,
-  cacheDir: './node_modules/.vite/standalone-template',
-
+  cacheDir: './node_modules/.vite/nest-probot',
   plugins: [nxViteTsPaths()],
+
+  root: __dirname,
 
   // Uncomment this if you are using workers.
   // worker: {
@@ -14,11 +13,11 @@ export default defineConfig({
   // },
 
   test: {
-    watch: false,
-    globals: true,
+    coverage: { provider: 'v8', reportsDirectory: './coverage/nest-probot' },
     environment: 'node',
+    globals: true,
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
-    coverage: { reportsDirectory: './coverage/standalone-template', provider: 'v8' },
+    watch: false,
   },
 });

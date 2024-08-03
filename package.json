@@ -1,6 +1,6 @@
 {
-  "name": "@standalone-template/source",
-  "version": "0.0.1",
+  "name": "@hive-o/nest-probot",
+  "version": "1.6.0",
   "license": "MIT",
   "scripts": {
     "build": "nx build",
@@ -12,6 +12,17 @@
     "access": "public"
   },
   "dependencies": {
+    "@nestjs/common": "^10.0.2",
+    "@nestjs/core": "^10.0.2",
+    "@octokit/auth-app": "^6.0.4",
+    "@octokit/rest": "^20.0.2",
+    "@octokit/webhooks": "12.2.0",
+    "@probot/get-private-key": "^1.1.2",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.3.7",
+    "octokit": "^3.2.1",
+    "probot": "^13.3.6",
+    "smee-client": "^2.0.2",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
